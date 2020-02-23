@@ -3,8 +3,11 @@ import os
 import json
 import time
 
+# String to declare the user name of the Windows account
+username = "Alex Maclean"
+
 # String to declare the folder to sort
-sourceFolder = "C:/Users/Alex Maclean/Downloads"
+sourceFolder = "C:/Users/" + username + "/Downloads"
 
 # String to declare header for beginning of file name (optional)
 fileHeader = ""
@@ -27,17 +30,17 @@ def file_sorter(sourceFolder):
             fileNameExtension = file.split(".")
         # If statement to assign destination folder based on file type
         if (fileNameExtension[-1] in desktopExtensions):
-            destinationFolder = "C:/Users/Alex Maclean/Desktop"
+            destinationFolder = "C:/Users/" + username + "/Desktop"
         elif (fileNameExtension[-1] in documentExtensions):
-            destinationFolder = "C:/Users/Alex Maclean/Documents"
+            destinationFolder = "C:/Users/" + username + "/Documents"
         elif (fileNameExtension[-1] in pictureExtensions):
-            destinationFolder = "C:/Users/Alex Maclean/Pictures"
+            destinationFolder = "C:/Users/"+ username + "/Pictures"
         elif (fileNameExtension[-1] in videoExtensions):
-            destinationFolder = "C:/Users/Alex Maclean/Videos"
+            destinationFolder = "C:/Users/" + username + "/Videos"
         elif (fileNameExtension[-1] in audioExtensions):
-            destinationFolder = "C:/Users/Alex Maclean/Music"
+            destinationFolder = "C:/Users/" + username + "/Music"
         else:
-            destinationFolder = "C:/Users/Alex Maclean/Documents"
+            destinationFolder = "C:/Users/" + username + "/Documents"
         # Strings to declare the source, destination, and header (if applicable) of the file
         source = sourceFolder + "/" + file
         destination = destinationFolder + "/" + fileHeader + file
