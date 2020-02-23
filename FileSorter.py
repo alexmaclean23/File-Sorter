@@ -26,18 +26,18 @@ def file_sorter(sourceFolder):
         else:
             fileNameExtension = file.split(".")
         # If statement to assign destination folder based on file type
-        if (fileNameExtension[1] in desktopExtensions):
+        if (fileNameExtension[-1] in desktopExtensions):
             destinationFolder = "C:/Users/Alex Maclean/Desktop"
-        elif (fileNameExtension[1] in documentExtensions):
+        elif (fileNameExtension[-1] in documentExtensions):
             destinationFolder = "C:/Users/Alex Maclean/Documents"
-        elif (fileNameExtension[1] in pictureExtensions):
+        elif (fileNameExtension[-1] in pictureExtensions):
             destinationFolder = "C:/Users/Alex Maclean/Pictures"
-        elif (fileNameExtension[1] in videoExtensions):
+        elif (fileNameExtension[-1] in videoExtensions):
             destinationFolder = "C:/Users/Alex Maclean/Videos"
-        elif (fileNameExtension[1] in audioExtensions):
+        elif (fileNameExtension[-1] in audioExtensions):
             destinationFolder = "C:/Users/Alex Maclean/Music"
         else:
-            pass
+            destinationFolder = "C:/Users/Alex Maclean/Documents"
         # Strings to declare the source, destination, and header (if applicable) of the file
         source = sourceFolder + "/" + file
         destination = destinationFolder + "/" + fileHeader + file
