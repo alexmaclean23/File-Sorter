@@ -4,7 +4,7 @@ import json
 import time
 
 # String to declare the user name of the Windows account
-username = "Alex Maclean"
+username = "alexmaclean23"
 
 # String to declare the folder to sort
 sourceFolder = "C:/Users/" + username + "/Downloads"
